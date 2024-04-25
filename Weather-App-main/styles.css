@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+body {
+  background-color: #42439a;
+
+  background-image: url("img/weather.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  font-family: "Fredoka One", cursive;
+  color: #fff;
+}
+
+.search-bar {
+  margin: auto;
+  margin-top: 2vw;
+  padding: 1vw;
+  width: 50%;
+  border-radius: 10px;
+  align-items: center;
+  /* From https://css.glass */
+  background: rgba(21, 20, 20, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.4px);
+  -webkit-backdrop-filter: blur(6.4px);
+  border: 1px solid rgba(21, 20, 20, 0.15);
+}
+
+.form-control {
+  width: 60%;
+  font-size: 16px;
+  margin-left: 2vw;
+  padding-left: 1vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.2vw;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.637);
+  border-color: #099fff;
+  font-weight: bold;
+  font-family: "Fredoka One", cursive;
+  color: white;
+  letter-spacing: 2px;
+}
+
+#submit {
+  font-size: 16px;
+  margin-left: 0.2vw;
+  padding: 0.5vw 1vw 0.2vw 1vw;
+  border-radius: 5px;
+  border-color: transparent;
+  background-color: #099fff;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Fredoka One", cursive;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+#current-location {
+  margin-left: 0.8vw;
+  margin-top: 0;
+  padding: 0;
+  border-radius: 50px;
+  border-color: transparent;
+  text-transform: uppercase;
+  align-self: flex-end;
+  background-color: transparent;
+  position: absolute;
+  transform: translate(70px, -1px);
+  cursor: pointer;
+}
+
+.current-container {
+  margin: auto;
+  margin-top: 1vw;
+  padding: 1vw;
+  width: 50%;
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.4px);
+  -webkit-backdrop-filter: blur(6.4px);
+  border: 1px solid rgba(21, 20, 20, 0.15);
+  border-radius: 10px;
+}
+.current-container h3 {
+  margin: 0;
+  margin-top: 1vw;
+  font-size: 17px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.current-container h3 #values {
+  font-size: 20px;
+  color: #099fff;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+.row-sub {
+  display: flex;
+}
+.col-sub {
+  flex: 50%;
+}
+#place-time-day {
+  margin: 1vw;
+  margin-left: 1.5vw !important;
+  margin-top: 2vw;
+}
+#place-time-day h1 {
+  font-size: 80px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+#place-time-day h3 {
+  font-size: 25px;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  padding-left: 1vw;
+}
+
+#place-time-day h5 {
+  color: #ff0099;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  padding-left: 1vw;
+  font-size: 17px;
+}
+#weather-details {
+  margin: 1vw;
+}
+#weather-details h3 {
+  margin: 0;
+  margin-top: 1vw;
+  font-size: 18px;
+  text-align: center;
+  color: #ff0099;
+}
+#weather-details h1 {
+  margin-top: 0;
+  padding: 0;
+  margin: 1vw;
+  font-size: 80px;
+  text-align: center;
+}
+#weather-details h1 .deg-symbol {
+  font-size: 60px;
+}
+
+#icon-details img {
+  display: block;
+  margin-top: 1vw;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  animation: rotation 5s infinite linear;
+  height: 160px;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(-20deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+
+#icon-details img:hover {
+  animation: none;
+}
+
+.temp-conversion {
+  margin: 0;
+  padding: 0 !important;
+}
+
+.temp-conversion a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.week-forecast {
+  margin: auto;
+  padding: 0;
+  margin-top: 1vw;
+  width: 53%;
+  border-radius: 10px;
+  display: flexbox;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.card {
+  padding: 0.5vw;
+  margin: 0.5vw;
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.4px);
+  -webkit-backdrop-filter: blur(6.4px);
+  border: 1px solid rgba(21, 20, 20, 0.15);
+  border-radius: 10px;
+  transition: ease-in-out 4ms;
+}
+
+.card:hover {
+  border-color: #099fff;
+  border-width: 1px;
+  transition: ease-in-out 4ms;
+}
+
+.card img {
+  display: block;
+  margin-top: 1vw;
+  margin-left: auto;
+  margin-right: auto;
+  transition: ease-in-out 4ms;
+  height: 105px;
+}
+
+.card img:hover {
+  animation: rotation 5s infinite linear;
+  transition: ease-in-out 4ms;
+}
+
+.card h3 {
+  margin: 0;
+  margin-top: 0.5vw;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  letter-spacing: 2px;
+}
+
+.card h4 {
+  margin: 0;
+  margin-top: 0.2vw;
+  margin-bottom: 2vw;
+  font-size: 17px;
+  text-align: center;
+  color: #ff0099;
+  border-radius: 5px;
+  letter-spacing: 2px;
+}
+
+.card .min {
+  color: #ff0099;
+  font-size: 15px;
+}
+
+footer {
+  text-align: center;
+  margin: 0.5vw;
+  margin-bottom: 0vw;
+  padding-bottom: 0.2vw;
+  padding: 0.5vw;
+  font-size: 18px;
+  letter-spacing: 1.3px;
+}
+
+.attribution {
+  font-size: 10px;
+}
+
+footer a {
+  color: #ff0099;
+  text-decoration: none;
+}
+
+footer .emoji {
+  color: initial !important;
+  font-style: initial !important;
+}
